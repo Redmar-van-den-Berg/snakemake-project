@@ -2,7 +2,12 @@
   tags:
     - integration
   command: >
-    snakemake -r -p -s Snakefile --jobs 1 --latency-wait 120
+    snakemake
+      --reason
+      --printshellcmds
+      --jobs 1
+      --latency-wait 120
+      --snakefile Snakefile
   stderr:
     must_not_contain:
       - rror

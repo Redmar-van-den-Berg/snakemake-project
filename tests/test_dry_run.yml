@@ -2,7 +2,11 @@
   tags:
     - dry-run
   command: >
-    snakemake -n -r -p -s Snakefile
+    snakemake
+      --dryrun
+      --reason
+      --printshellcmds
+      --snakefile Snakefile
   exit_code: 0
   stdout:
     contains:
