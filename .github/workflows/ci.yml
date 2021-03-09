@@ -1,0 +1,11 @@
+name: Continuous Integration
+
+on: [push, pull_requests]
+
+steps:
+- uses: actions/checkout@v2
+- uses: eWaterCycle/setup-singularity@v6
+  with:
+    singularity-version: 3.6.4
+- name: Run a singularity container
+  run: singularity run docker://alpine cat /etc/os-release
