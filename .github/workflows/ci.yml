@@ -31,9 +31,7 @@ jobs:
     - name: Run test in conda evironment
       # Use --symlink to limit disk usage.
       run: >-
-        pytest --keep-workflow-wd-on-fail
-          --tag ${{ matrix.test }}
-          --symlink tests/
+        pytest --keep-workflow-wd-on-fail --tag ${{ matrix.test }} --symlink tests/
     - name: Check job stderr messages in case of failure
       if: ${{ failure() }}
       run: >-
