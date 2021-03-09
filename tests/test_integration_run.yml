@@ -7,6 +7,7 @@
       --printshellcmds
       --jobs 1
       --latency-wait 120
+      --use-singularity --singularity-args ' --cleanenv --bind /tmp'
       --snakefile Snakefile
   stderr:
     must_not_contain:
