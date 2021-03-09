@@ -2,6 +2,12 @@ name: Continuous Integration
 
 on: [push, pull_request]
 
+defaults:
+  run:
+    # This is needed for miniconda, see:
+    # https://github.com/marketplace/actions/setup-miniconda#important.
+    shell: bash -l {0}
+
 jobs:
   tests:
     runs-on: ubuntu-latest
