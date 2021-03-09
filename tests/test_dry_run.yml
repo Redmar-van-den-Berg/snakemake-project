@@ -1,0 +1,14 @@
+- name: dry-run-vanilla
+  tags:
+    - dry-run
+  command: >
+    snakemake -n -r -p -s Snakefile
+  exit_code: 0
+  stdout:
+    contains:
+      - echo "Hello world!" > outputfile.txt
+    must_not_contain:
+      - rror
+  stderr:
+    must_not_contain:
+      - rror
