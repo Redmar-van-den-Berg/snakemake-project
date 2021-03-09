@@ -21,6 +21,7 @@ jobs:
       with:
         activate-environment: snakemake-project
         environment-file: environment.yml
+        auto-activate-base: false
     - name: Run test in conda evironment
       # Use --symlink to limit disk usage.
       run: >-
