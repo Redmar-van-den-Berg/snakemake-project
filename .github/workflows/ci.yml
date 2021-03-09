@@ -14,9 +14,11 @@ jobs:
     strategy:
       matrix:
         test:
-          - sanity
-          - dry-run
-          - integration
+          - sanity-snakemake
+          - sanity-snakemake-lint
+          - sanity-singularity
+          - dry-run-vanilla
+          - integration-vanilla
     steps:
     - uses: actions/checkout@v2
 
