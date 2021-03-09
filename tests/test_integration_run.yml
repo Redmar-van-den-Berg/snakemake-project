@@ -1,0 +1,12 @@
+- name: integration-vanilla
+  tags:
+    - integration
+  command: >
+    snakemake -r -p -s Snakefile --jobs 1 --latency-wait 120
+  stderr:
+    must_not_contain:
+      - rror
+  files:
+    - path: outputfile.txt
+      contains:
+        - Hello world!
