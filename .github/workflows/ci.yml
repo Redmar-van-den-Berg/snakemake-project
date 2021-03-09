@@ -5,10 +5,41 @@ on: [push, pull_request]
 jobs:
   tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test:
+          - sanity
+          - dry-run
+          - integration
     steps:
     - uses: actions/checkout@v2
     - uses: eWaterCycle/setup-singularity@v6
       with:
         singularity-version: 3.6.4
-    - name: Run a singularity container
-      run: singularity run docker://alpine cat /etc/os-release
+    - uses: conda-incubator/setup-miniconda@v2.0.1
+      # https://github.com/conda-incubator/setup-miniconda.
+      with:
+        activate-environment: snakemake-project
+        environment-file: environment.yml
+    - name: Run test in conda evironment
+      # Use --symlink to limit disk usage.
+      run: >-
+        pytest --keep-workflow-wd-on-fail
+          --tag ${{ matrix.test }}
+          --symlink tests/
+    - name: Check job stderr messages in case of failure
+      if: ${{ failure() }}
+      run: >-
+        bash -c '
+        for file in $(find /tmp -name log.err); do
+          echo $file; cat $file
+        done
+        '
+    - name: Check job stdout messages in case of failure
+      if: ${{ failure() }}
+      run: >-
+        bash -c '
+        for file in $(find /tmp -name log.out); do
+          echo $file; cat $file
+        done
+        '
