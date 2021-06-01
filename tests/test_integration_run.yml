@@ -8,6 +8,7 @@
       --jobs 1
       --latency-wait 120
       --use-singularity --singularity-args ' --cleanenv --bind /tmp'
+      --config pepfile=tests/pep/project_config.yaml
       --snakefile Snakefile
   stderr:
     must_not_contain:
@@ -16,3 +17,6 @@
     - path: outputfile.txt
       contains:
         - Hello world!
+    - path: sample1.txt
+    - path: sample2.txt
+    - path: sample3.txt

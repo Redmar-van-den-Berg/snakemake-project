@@ -17,4 +17,6 @@
   tags:
     - sanity
   command: >
-    snakemake --lint
+    snakemake
+      --lint
+      --config pepfile=tests/pep/project_config.yaml
