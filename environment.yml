@@ -8,4 +8,5 @@ channels:
 dependencies:
  - pytest-workflow>=1.4.0
  - python>3.8
- - snakemake-minimal
+ - snakemake-minimal=6.4
+ - peppy=0.31
