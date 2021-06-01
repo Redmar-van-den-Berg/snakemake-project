@@ -14,7 +14,7 @@ rule example:
     log:
         "log/stdout.txt"
     container:
-        "docker://debian:latest"
+        containers["debian"]
     shell: """
         echo "Hello world!" > {output} 2> {log}
     """
@@ -25,7 +25,7 @@ rule sample:
     log:
         "log/{sample}_touch.txt"
     container:
-        "docker://debian:latest"
+        containers["debian"]
     shell: """
         touch {output} 2> {log}
     """
