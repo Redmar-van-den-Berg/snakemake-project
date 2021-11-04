@@ -48,7 +48,7 @@ jobs:
       with:
         path: /usr/share/miniconda/envs/snakemake-project
         key:
-          ${{ runner.os}}-HiFi-assembly-${{ env.CACHE_NUMBER }}-${{ hashFiles('environment.yml') }}
+          ${{ runner.os}}-snakemake-project-${{ env.CACHE_NUMBER }}-${{ hashFiles('environment.yml') }}
 
     - uses: conda-incubator/setup-miniconda@v2.0.1
       # https://github.com/conda-incubator/setup-miniconda.
