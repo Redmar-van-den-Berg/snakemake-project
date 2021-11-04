@@ -30,7 +30,7 @@ jobs:
       with:
         singularity-version: 3.6.4
 
-    - name: Cache conda
+    - name: Cache conda packages
       uses: actions/cache@v2
       env:
         # Increase this value to manually invalidate the cache
@@ -40,7 +40,7 @@ jobs:
         key:
           ${{ runner.os}}-conda-${{ env.CACHE_NUMBER }}-${{ hashFiles('environment.yml') }}
 
-    - name: Cache conda-environment snakemake-project
+    - name: Cache conda environment
       uses: actions/cache@v2
       env:
         # Increase this value to manually invalidate the cache
