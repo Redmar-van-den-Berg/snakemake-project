@@ -20,3 +20,8 @@
     snakemake
       --lint
       --config pepfile=tests/pep/project_config.yaml
+
+- name: sanity-snakefmt
+  tags:
+    - sanity
+  command: snakefmt --check --verbose .

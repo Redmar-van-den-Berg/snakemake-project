@@ -1,6 +1,5 @@
-containers = {
-        "debian": "docker://debian:latest"
-}
+containers = {"debian": "docker://debian:latest"}
+
 
 def get_outfile():
-    return 'outputfile.txt'
+    return "outputfile.txt"

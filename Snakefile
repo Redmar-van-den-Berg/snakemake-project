@@ -1,31 +1,37 @@
 
 include: "common.smk"
+
+
 pepfile: config["pepfile"]
 
 
 rule all:
     input:
-        outfile = get_outfile(),
-        samples = expand('{sample}.txt', sample=pep.sample_table["sample_name"])
+        outfile=get_outfile(),
+        samples=expand("{sample}.txt", sample=pep.sample_table["sample_name"]),
+
 
 rule example:
-    output: 
-        get_outfile()
+    output:
+        get_outfile(),
     log:
-        "log/stdout.txt"
+        "log/stdout.txt",
     container:
         containers["debian"]
-    shell: """
+    shell:
+        """
         echo "Hello world!" > {output} 2> {log}
-    """
+        """
+
 
 rule sample:
     output:
-        "{sample}.txt"
+        "{sample}.txt",
     log:
-        "log/{sample}_touch.txt"
+        "log/{sample}_touch.txt",
     container:
         containers["debian"]
-    shell: """
+    shell:
+        """
         touch {output} 2> {log}
-    """
+        """
