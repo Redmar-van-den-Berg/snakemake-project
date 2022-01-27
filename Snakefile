@@ -50,5 +50,5 @@ rule map:
         containers["debian"]
     shell:
         """
-        bwa mem ref.fa {input.f} {input.r}
+        echo mem ref.fa {input.f} {input.r} > {output}
         """

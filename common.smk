@@ -24,4 +24,4 @@ def get_reverse(wildcards):
         return [reverse]
     # If multiple fastq files were specified, reverse will be a list
     else:
-        return [reverse]
+        return reverse
