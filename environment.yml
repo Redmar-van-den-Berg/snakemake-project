@@ -6,7 +6,7 @@ channels:
   - bioconda
   - conda-forge
 dependencies:
- - pytest-workflow>=1.4.0
+ - pytest-workflow=1.6
  - python>3.8
- - snakemake-minimal=6.4
+ - snakemake-minimal=6.14
  - peppy=0.31
