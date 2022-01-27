@@ -15,6 +15,7 @@
       - sample1.txt
       - sample2.txt
       - sample3.txt
+      - "bwa mem ref.fa tests/data/sample1_R1.fastq.gz tests/data/sample1_R2.fastq.gz"
     must_not_contain:
       - rror
   stderr:
