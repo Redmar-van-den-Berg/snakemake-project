@@ -19,3 +19,12 @@ environment.
 conda env create --file environment.yml
 conda activate snakemake-project
 ```
+
+## Settings
+There are three levels where configuration options are set, in decreasing order
+of priority.
+1. Flags passed to snakemake using `--config`, or in the specified
+   `--configfile`.
+2. Setting specified in the PEP project configuration, under the key
+   `snakemake-pipeline`
+3. The default settings for the pipeline, as specified in the `common.smk` file

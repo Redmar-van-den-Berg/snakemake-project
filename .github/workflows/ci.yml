@@ -24,6 +24,9 @@ jobs:
           - sanity-snakefmt
           - dry-run-vanilla
           - dry-run-subsamples
+          - dry-run-settings-command-line
+          - dry-run-settings-configfile
+          - dry-run-settings-pepfile
           - integration-vanilla
     steps:
     - uses: actions/checkout@v2
