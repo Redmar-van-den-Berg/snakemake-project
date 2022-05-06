@@ -29,6 +29,11 @@ of priority.
    `snakemake-project`
 3. The default settings for the pipeline, as specified in the `common.smk` file
 
+### Supported settings
+The following settings are available for the pipeline.
+| Option               | Type              | Explanation                             |
+| ---------------------| ----------------- | --------------------------------------- |
+| reference            | Optional file     | If specified, the reads will be mapped to the reference |
 
 ## Tests
 You can run the tests that accompany this pipeline with the following commands
