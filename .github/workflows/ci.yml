@@ -23,8 +23,8 @@ jobs:
           - integration
     steps:
     - uses: actions/checkout@v2
-        with:
-          submodules: recursive
+      with:
+        submodules: recursive
 
     - name: Setup Mambaforge
       uses: conda-incubator/setup-miniconda@v2
