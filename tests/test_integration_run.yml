@@ -8,6 +8,7 @@
       --jobs 1
       --latency-wait 120
       --use-singularity --singularity-args ' --cleanenv --bind /tmp'
+      --singularity-prefix '~/.singularity/cache/snakemake'
       --config pepfile=tests/pep/project_config.yaml
       --snakefile Snakefile
   stderr:
