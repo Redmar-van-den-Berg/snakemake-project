@@ -6,9 +6,8 @@ channels:
   - bioconda
   - conda-forge
 dependencies:
-  - black=21.12b0
-  - peppy=0.31.2
-  - pytest-workflow=1.6.0
-  - python=3.10.2
-  - snakemake-minimal=6.14.0
-  - snakefmt=0.4.4
+  - black>=23.7
+  - peppy>=0.35
+  - pytest-workflow>=2.0.1
+  - snakemake-minimal>=7.30
+  - snakefmt>=0.8.4
