@@ -8,6 +8,9 @@ This document is user facing. Please word the changes in such a way
 that users understand how the changes affect the new version.
 -->
 
+v1.0.1-dev
+----------
++ Update to snakemake 7.3
 v0.0.1
 ---------------------------
 + Add support for project configuration using
