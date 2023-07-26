@@ -6,7 +6,7 @@
       --dryrun
       --reason
       --printshellcmds
-      --config pepfile=tests/pep/project_config.yaml
+      --config pepfile=tests/pep/samples.csv
       --snakefile Snakefile
   exit_code: 0
   stdout:
@@ -33,7 +33,7 @@
       --dryrun
       --reason
       --printshellcmds
-      --config pepfile=tests/pep/project_subsamples.yaml
+      --config pepfile=tests/pep/subsamples.csv
       --snakefile Snakefile
   exit_code: 0
   stdout:
@@ -60,7 +60,7 @@
       --reason
       --printshellcmds
       --config
-      pepfile=tests/pep/project_config.yaml
+      pepfile=tests/pep/samples.csv
       setting1="command line"
       --snakefile Snakefile
   exit_code: 0
@@ -83,7 +83,7 @@
       --reason
       --printshellcmds
       --config
-      pepfile=tests/pep/project_config.yaml
+      pepfile=tests/pep/samples.csv
       setting1="command line"
       --configfile=tests/data/config.json
       --snakefile Snakefile
@@ -97,28 +97,3 @@
   stderr:
     must_not_contain:
       - rror
-
-- name: dry-run-settings-pepfile
-  tags:
-    - dry-run
-  command: >
-    snakemake
-      --dryrun
-      --reason
-      --printshellcmds
-      --config
-      pepfile=tests/pep/project_config_settings.yaml
-      setting1="command line"
-      --configfile=tests/data/config.json
-      --snakefile Snakefile
-  exit_code: 0
-  stdout:
-    contains:
-      # Test if setting1 has overwritten the default settings from common.smk
-      - echo command line settingsfile pepfile
-    must_not_contain:
-      - rror
-  stderr:
-    must_not_contain:
-      - rror
-

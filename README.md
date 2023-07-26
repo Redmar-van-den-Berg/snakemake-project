@@ -21,13 +21,11 @@ conda activate snakemake-project
 ```
 
 ## Settings
-There are three levels where configuration options are set, in decreasing order
+There are two ways configuration options are set, in decreasing order
 of priority.
 1. Flags passed to snakemake using `--config`, or in the specified
    `--configfile`.
-2. Setting specified in the PEP project configuration, under the key
-   `snakemake-project`
-3. The default settings for the pipeline, as specified in the `common.smk` file
+2. The default settings for the pipeline, as specified in the `common.smk` file
 
 ### Supported settings
 The following settings are available for the pipeline.
