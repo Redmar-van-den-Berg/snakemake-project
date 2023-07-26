@@ -12,6 +12,7 @@ that users understand how the changes affect the new version.
 + Remove settings from the PEP configuration
 + Switch to simplified PEP configuration (a csv is valid PEP)
 + Reduce wait time for missing files to 5 seconds
++ Keep temporary and failed files, to aid in debugging
 
 ## v0.0.1
 + Add support for project configuration using

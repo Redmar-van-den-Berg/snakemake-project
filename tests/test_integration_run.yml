@@ -7,6 +7,8 @@
       --printshellcmds
       --jobs 1
       --latency-wait 5
+      --no-temp
+      --keep-incomplete
       --use-singularity --singularity-args ' --cleanenv --bind /tmp'
       --singularity-prefix '~/.singularity/cache/snakemake'
       --config pepfile=tests/pep/project_config.yaml
