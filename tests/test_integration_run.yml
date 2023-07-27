@@ -7,11 +7,11 @@
       --printshellcmds
       --jobs 1
       --latency-wait 5
-      --no-temp
+      --notemp
       --keep-incomplete
       --use-singularity --singularity-args ' --cleanenv --bind /tmp'
       --singularity-prefix '~/.singularity/cache/snakemake'
-      --config pepfile=tests/pep/project_config.yaml
+      --config pepfile=tests/pep/samples.csv
       --snakefile Snakefile
   stderr:
     must_not_contain:
