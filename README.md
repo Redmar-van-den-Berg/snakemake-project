@@ -23,15 +23,16 @@ conda activate snakemake-project
 ## Settings
 There are two ways configuration options are set, in decreasing order
 of priority.
-1. Flags passed to snakemake using `--config`, or in the specified
-   `--configfile`.
-2. The default settings for the pipeline, as specified in the `common.smk` file
+1. Key-values pairs passed to snakemake using `--config`
+2. In the specified `--configfile`.
 
 ### Supported settings
 The following settings are available for the pipeline.
-| Option               | Type              | Explanation                             |
-| ---------------------| ----------------- | --------------------------------------- |
-| reference            | Optional file     | If specified, the reads will be mapped to the reference |
+| Option               | Type                  | Explanation                             |
+| ---------------------| -----------------     | --------------------------------------- |
+| setting1             | Required string       | The first setting                       |
+| setting2             | Required settingsfile | A file with some settings               |
+| setting3             | Required string       | A third setting                         |
 
 ## Tests
 You can run the tests that accompany this pipeline with the following commands

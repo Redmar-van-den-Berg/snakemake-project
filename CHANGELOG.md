@@ -7,7 +7,9 @@ This document is user facing. Please word the changes in such a way
 that users understand how the changes affect the new version.
 -->
 
-## v1.1.1-dev
+## v1.2.0
++ Update to snakemake 8.4
++ Remove default configuration
 
 ## v1.1.0
 + Update to snakemake 7.3

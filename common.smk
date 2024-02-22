@@ -1,5 +1,4 @@
 containers = {"debian": "docker://debian:latest"}
-default = {"setting1": "common.smk", "setting2": "common.smk", "setting3": "common.smk"}
 
 
 def get_outfile():

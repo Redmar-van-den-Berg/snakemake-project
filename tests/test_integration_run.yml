@@ -10,6 +10,7 @@
       --keep-incomplete
       --use-singularity --singularity-args ' --cleanenv --bind /tmp'
       --singularity-prefix '~/.singularity/cache/snakemake'
+      --configfile tests/config.json
       --config pepfile=tests/pep/samples.csv
       --snakefile Snakefile
   stderr:
