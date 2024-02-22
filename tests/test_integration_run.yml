@@ -3,7 +3,6 @@
     - integration
   command: >
     snakemake
-      --reason
       --printshellcmds
       --jobs 1
       --latency-wait 5

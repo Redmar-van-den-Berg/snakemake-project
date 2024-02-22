@@ -4,7 +4,6 @@
   command: >
     snakemake
       --dryrun
-      --reason
       --printshellcmds
       --config pepfile=tests/pep/samples.csv
       --snakefile Snakefile
@@ -31,7 +30,6 @@
   command: >
     snakemake
       --dryrun
-      --reason
       --printshellcmds
       --config pepfile=tests/pep/subsamples.csv
       --snakefile Snakefile
@@ -57,7 +55,6 @@
   command: >
     snakemake
       --dryrun
-      --reason
       --printshellcmds
       --config
       pepfile=tests/pep/samples.csv
@@ -80,7 +77,6 @@
   command: >
     snakemake
       --dryrun
-      --reason
       --printshellcmds
       --config
       pepfile=tests/pep/samples.csv
