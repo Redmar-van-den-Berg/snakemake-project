@@ -22,7 +22,7 @@ jobs:
           - dry-run
           - integration
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
 
@@ -42,7 +42,7 @@ jobs:
 
     - name: Cache conda environment
       id: conda-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       env:
         # Increase this value to manually invalidate the cache
         CACHE_NUMBER: 0
@@ -60,7 +60,7 @@ jobs:
         singularity-version: 3.6.4
 
     - name: Cache singularity images
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       env:
         # Increase this value to manually invalidate the cache
         CACHE_NUMBER: 0
