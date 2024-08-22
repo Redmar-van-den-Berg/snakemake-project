@@ -37,7 +37,7 @@ jobs:
     # This is used to invalidate the conda environment every week
     - name: Get week number
       id: get-date
-      run: echo "::set-output name=week::$(/bin/date -u '+%Y-w%V')"
+      run: echo "week=$(/bin/date -u '+%Y-w%V')" >> $GITHUB_OUTPUT
       shell: bash
 
     - name: Cache conda environment
@@ -57,7 +57,7 @@ jobs:
     - name: Install singularity
       uses: eWaterCycle/setup-singularity@v7
       with:
-        singularity-version: 3.6.4
+        singularity-version: 3.7
 
     - name: Cache singularity images
       uses: actions/cache@v4
