@@ -3,11 +3,11 @@
     - dry-run
   command: >
     snakemake
-      --dryrun
-      --printshellcmds
+      --snakefile Snakefile
+      --workflow-profile tests
       --configfile tests/config.json
       --config pepfile=tests/pep/samples.csv
-      --snakefile Snakefile
+      --dry-run
   exit_code: 0
   stdout:
     contains:
@@ -29,11 +29,11 @@
     - dry-run
   command: >
     snakemake
+      --snakefile Snakefile
+      --workflow-profile tests
       --dryrun
-      --printshellcmds
       --configfile tests/config.json
       --config pepfile=tests/pep/subsamples.csv
-      --snakefile Snakefile
   exit_code: 0
   stdout:
     contains:
@@ -55,15 +55,14 @@
     - dry-run
   command: >
     snakemake
-      --dryrun
-      --printshellcmds
+      --snakefile Snakefile
+      --workflow-profile tests
       --configfile tests/config.json
       --config
-      pepfile=tests/pep/samples.csv
-      setting1="command line"
-      --snakefile Snakefile
+        pepfile=tests/pep/samples.csv
+        setting1="command line"
   exit_code: 0
-  stdout:
+  stderr:
     contains:
       # Test if setting1 has overwritten the default settings from the configfile
       - echo command line settingsfile third_setting

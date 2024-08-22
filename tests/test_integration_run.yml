@@ -3,16 +3,10 @@
     - integration
   command: >
     snakemake
-      --printshellcmds
-      --jobs 1
-      --latency-wait 5
-      --notemp
-      --keep-incomplete
-      --use-singularity --singularity-args ' --cleanenv --bind /tmp'
-      --singularity-prefix '~/.singularity/cache/snakemake'
+      --snakefile Snakefile
+      --workflow-profile tests
       --configfile tests/config.json
       --config pepfile=tests/pep/samples.csv
-      --snakefile Snakefile
   stderr:
     must_not_contain:
       - rror
