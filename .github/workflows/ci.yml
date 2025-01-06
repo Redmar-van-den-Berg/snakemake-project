@@ -26,10 +26,9 @@ jobs:
       with:
         submodules: recursive
 
-    - name: Setup Mambaforge
+    - name: Setup miniforge
       uses: conda-incubator/setup-miniconda@v3
       with:
-        miniforge-variant: Mambaforge
         miniforge-version: latest
         activate-environment: snakemake-project
         use-mamba: true
@@ -63,7 +62,7 @@ jobs:
       uses: actions/cache@v4
       env:
         # Increase this value to manually invalidate the cache
-        CACHE_NUMBER: 1
+        CACHE_NUMBER: 0
       with:
         path:
           ~/.singularity/cache/snakemake
