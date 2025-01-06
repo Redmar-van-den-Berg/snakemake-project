@@ -63,7 +63,7 @@ jobs:
       uses: actions/cache@v4
       env:
         # Increase this value to manually invalidate the cache
-        CACHE_NUMBER: 0
+        CACHE_NUMBER: 1
       with:
         path:
           ~/.singularity/cache/snakemake
